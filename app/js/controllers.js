@@ -1,12 +1,13 @@
 'use strict';
 
-/* Controllers */
 
-
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
-
-function MyCtrl2() {
+function MainCtrl($scope){
+	$scope.version= '0.1';
 }
-MyCtrl2.$inject = [];
+
+function WallCtrl($scope, Tweets) {
+	$scope.data = Tweets.all();
+}
+
+
+function AboutCtrl() {}
